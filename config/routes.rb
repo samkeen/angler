@@ -1,4 +1,7 @@
 Angler::Application.routes.draw do
+  resources :pushes
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

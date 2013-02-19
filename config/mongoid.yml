@@ -34,7 +34,8 @@ development:
     # allow_dynamic_fields: true
 
     # Enable the identity map, needed for eager loading. (default: false)
-    # identity_map_enabled: false
+    # see http://mongoid.org/en/mongoid/docs/identity_map.html
+    identity_map_enabled: true
 
     # Includes the root model name in json serialization. (default: false)
     # include_root_in_json: false
@@ -78,6 +79,9 @@ test:
         # low amounts for fast failures.
         max_retries: 1
         retry_interval: 0
+        # Enable the identity map, needed for eager loading. (default: false)
+        # see http://mongoid.org/en/mongoid/docs/identity_map.html
+        identity_map_enabled: true
 production:
   sessions:
     default:
@@ -85,3 +89,6 @@ production:
       options:
         skip_version_check: true
         safe: true
+        # Enable the identity map, needed for eager loading. (default: false)
+        # see http://mongoid.org/en/mongoid/docs/identity_map.html
+        identity_map_enabled: true
